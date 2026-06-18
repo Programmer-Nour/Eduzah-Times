@@ -246,6 +246,10 @@
 
 @media screen and (max-width: 576px) {
 
+    .NavBar{
+        position: relative;
+    }
+
     .NavBarLogo {
         width: 125px;
         height: 100px;
@@ -256,8 +260,10 @@
         flex-direction: column;
         gap: 30px;
         position: absolute;
-        top: 6%;
-        left: 72%;
+        top: 30%;
+        right:0px;
+        left: auto;
+        z-index: 100;
         height: fit-content;
         width: 25vh;
         background-color: #131823;
