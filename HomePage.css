@@ -4,19 +4,13 @@
     box-sizing: border-box;
 }
 
-::selection{
-    background-color:#0F1F41;
+::selection {
+    background-color: #0F1F41;
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*---------------------------------------------------------------------------------- NavBar -----------------------------------------------------------------------*/
-
-
-.Container {
-    width: 85%;
-    margin: auto;
-}
 
 .NavBar {
     display: flex;
@@ -80,6 +74,16 @@
 
 .NavLinks ul li a.Active {
     color: #16c7e2;
+}
+
+.check {
+    display: none;
+}
+
+.bars {
+    display: none;
+    z-index: 100;
+    position: relative;
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -180,7 +184,6 @@
 .FooterLinks ul li {
     padding-bottom: 10px;
     transition: all 0.3s ease-in-out;
-
 }
 
 .FooterLinks ul li :hover {
@@ -244,7 +247,7 @@
 
 .List2 li p i {
     padding-right: 15px;
-     transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .List2 li p i:hover {
@@ -262,3 +265,131 @@
 }
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------- Mobile Size ------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 576px) {
+
+    .NavBarLogo {
+        width: 125px;
+        height: 100px;
+    }
+
+    .NavLinks ul {
+        display: none;
+        flex-direction: column;
+        gap: 30px;
+        position: absolute;
+        top: 6%;
+        left: 80%;
+        height: fit-content;
+        width: 25vh;
+        background-color: #131823;
+        text-align: left;
+        border: 1px solid #17A2B8;
+        border-radius: 10px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+
+    .NavLinks ul li a {
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 5px;
+    }
+
+    .NavLinks ul li span {
+        padding: 5px 5px;
+        margin-left: 5px;
+    }
+
+    .bars {
+        display: block;
+        font-size: 25px;
+        color: white;
+        margin-top: 35px;
+        margin-right: 25px;
+    }
+
+    .check:checked~ul {
+        display: flex;
+    }
+
+     /*---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    
+    /*----------------------------------------------------------------------- Home Page -----------------------------------------------------------------------------*/
+
+    .HomePage {
+        width: 100vh;
+    }
+
+    .HomePageContent {
+        margin-top: 180px;
+    }
+
+    .HomePageContent h1 {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+
+    .HomePageContent p {
+        font-size: 20px;
+        width: 70%;
+        margin-left: 115px;
+    }
+
+    .HomePageContent button {
+        animation: MovingButton 1.5s infinite;
+    }
+
+    @keyframes MovingButton {
+
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(7px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+
+    }
+
+    /*---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    
+    /*----------------------------------------------------------------------- Footer -------------------------------------------------------------------------------*/
+
+    .Footer {
+        width: 100vh;
+        margin-top: 100px;
+    }
+
+    .FooterContent {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 55px
+    }
+
+    .Logo {
+        width: 200px;
+        height: 150px;
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+
+    .FooterLinks {
+        margin-top: 40px;
+        margin-right: 150px;
+    }
+
+    .SocialLinks {
+        text-align: center;
+        margin-top: -20px;
+        margin-left: 160px;
+    }
+
+    /*---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+}
