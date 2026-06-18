@@ -5,7 +5,7 @@
 }
 
 ::selection {
-    background-color: #0F1F41;
+    background-color: #1ec8e3;
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -69,13 +69,28 @@
     background-color: #127281;
 }
 
+.check {
+    display: none;
+}
+
+.bars {
+    display: none;
+    z-index: 100;
+    position: relative;
+}
+
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------- Sign Up ----------------------------------------------------------------------------------*/
 
+.Container {
+    width: 95%;
+    margin: auto;
+}
+
 .SignUp {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 .SignUp h2 {
@@ -83,7 +98,7 @@
     font-weight: bolder;
     color: #47515f;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .SignUp h2::after {
@@ -123,9 +138,10 @@
     width: 35%;
     position: absolute;
     left: 32%;
+    z-index: -1;
     gap: 30px;
     padding: 30px 20px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.393);
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.382);
     animation: FloatingForm infinite 2s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
@@ -145,7 +161,7 @@
 }
 
 .SignUp form:hover {
-    box-shadow: 0px 0px 15px #2b3a5ef1;
+    box-shadow: 0px 0px 15px #17a3b878;
     transition: all 0.3s ease-in-out;
 }
 
@@ -165,6 +181,26 @@
 .SignUp form input:hover {
     border: 1px solid #17A2B8;
     transition: all 0.3s ease-in-out;
+}
+
+.terms {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: 95%;
+    text-align: left;
+}
+
+#Conditions {
+    width: auto;
+    margin-left: 5px;
+}
+
+.terms label {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(128, 128, 128);
+    margin-top: -2px;
 }
 
 .SignUp form button {
@@ -204,15 +240,117 @@
     transition: all 0.3s ease-in-out;
 }
 
-#Conditions {
-    width: 70%;
-    margin-left: -220px;
-}
-
-.terms label {
-    margin-left: -15px;
-    font-size: 18px;
-    color: rgb(128, 128, 128);
-}
-
 /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------- Mobile Size ------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 576px) {
+
+    .NavBarLogo {
+        width: 125px;
+        height: 100px;
+    }
+
+    .NavLinks ul {
+        display: none;
+        flex-direction: column;
+        gap: 30px;
+        position: absolute;
+        top: 6%;
+        left: 72%;
+        height: fit-content;
+        width: 25vh;
+        background-color: #131823;
+        text-align: left;
+        border: 1px solid #17A2B8;
+        border-radius: 10px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+
+    .NavLinks ul li a {
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 5px;
+    }
+
+    .NavLinks ul li span {
+        padding: 5px 5px;
+        margin-left: 5px;
+    }
+
+    .bars {
+        display: block;
+        font-size: 25px;
+        color: white;
+        margin-top: 35px;
+        margin-right: 25px;
+    }
+
+    .check:checked~ul {
+        display: flex;
+    }
+
+    /*---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    /*----------------------------------------------------------------------- Sign Up -----------------------------------------------------------------------------*/
+
+    .Container {
+        width: 95%;
+        margin: auto;
+    }
+
+    .SignUp {
+        margin-top: 15px;
+    }
+
+    .SignUp h2 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    .SignUp h2::after {
+        left: 45%;
+    }
+
+    .SignUp form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        position: absolute;
+        left: 10%;
+        gap: 20px;
+        padding: 30px 20px;
+        box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.382);
+        animation: FloatingForm infinite 2s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .SignUp form input {
+        width: 90%;
+        padding: 8px;
+        font-size: 15px;
+    }
+
+    .SignUp form button {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .terms label {
+        font-size: 15px;
+    }
+
+    .SignUp form p {
+        font-size: 15px;
+    }
+
+    .SignUp form p a {
+        font-size: 18px;
+    }
+
+
+
+
+}

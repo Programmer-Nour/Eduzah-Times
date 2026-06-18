@@ -20,6 +20,8 @@
             <img src="./Images/width_1600.png" alt="Eduzah Times Logo">
         </div>
         <div class="NavLinks">
+            <input type="checkbox" class="check" id="menu">
+            <label class="bars" for="menu"><i class="fa-solid fa-bars"></i></label>
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="#">About Us</a></li>
@@ -35,19 +37,21 @@
     <!-------------------------------------------------------------------- Sign Up ------------------------------------------------------------------------------------->
 
     <div class="SignUp">
-        <h2>Sign Up</h2>
-        <form>
-            <input type="text" placeholder="FullName" name="FullName" required>
-            <input type="email" placeholder="Email" name="Email" required>
-            <input type="password" placeholder="Password" name="Password" required>
-            <input type="password" placeholder="Confirm Password" name="ConfirmPassword" required>
-            <div class="terms">
-                <input type="checkbox" id="Conditions" required name="Terms & Conditions">
-                <label for="Conditions">I agree to the terms and conditions</label>
-            </div>
-            <p>Already Have An Account?<a href="#">Login</a></p>
-            <button type="submit">Create Account</button>
-        </form>
+        <div class="Container">
+            <h2>Sign Up</h2>
+            <form>
+                <input type="text" placeholder="FullName" name="FullName" required>
+                <input type="email" placeholder="Email" name="Email" required>
+                <input type="password" placeholder="Password" name="Password" required>
+                <input type="password" placeholder="Confirm Password" name="ConfirmPassword" required>
+                <div class="terms">
+                    <input type="checkbox" id="Conditions" required name="Terms & Conditions">
+                    <label for="Conditions">I agree to the terms and conditions</label>
+                </div>
+                <p>Already Have An Account?<a href="#">Login</a></p>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
     </div>
 
     <!------------------------------------------------------------------------------------------------------------------------------------------------------------------>
