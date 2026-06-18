@@ -365,6 +365,7 @@
     .Footer {
         width: 100vh;
         margin-top: 100px;
+        height: 100vh;
     }
 
     .FooterContent {

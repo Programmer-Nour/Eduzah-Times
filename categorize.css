@@ -10,12 +10,7 @@
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-/*--------------------------------------------------------------------------------------NavBar---------------------------------------------------------------------*/
-
-.Container {
-    width: 85%;
-    margin: auto;
-}
+/*---------------------------------------------------------------------------------- NavBar -----------------------------------------------------------------------*/
 
 .NavBar {
     display: flex;
@@ -49,18 +44,30 @@
     list-style: none;
     margin-right: 20px;
     margin-top: 35px;
-    position: relative;
 }
 
 .NavLinks ul li a {
     text-decoration: none;
     color: white;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 600;
+}
+
+.NavLinks ul li button {
+    outline: none;
+    border: none;
+    padding: 10px;
+    background-color: #17A2B8;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 7px;
+    margin-top: -10px;
 }
 
 .NavLinks ul li span {
     background-color: #17A2B8;
+    border: 1px solid transparent;
     padding: 12px 10px;
     border-radius: 6px;
 }
@@ -69,13 +76,28 @@
     color: #16c7e2;
 }
 
+.check {
+    display: none;
+}
+
+.bars {
+    display: none;
+    z-index: 100;
+    position: relative;
+}
+
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------- Categorize ----------------------------------------------------------------------------*/
 
 .Categorize {
-    margin-top: 35px;
+    margin-top: 20px;
     text-align: center;
+}
+
+.Container {
+    width: 90%;
+    margin: auto;
 }
 
 .Categorize h2 {
@@ -83,7 +105,7 @@
     font-weight: 600;
     color: #606D7F;
     position: relative;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 }
 
 .Categorize h2::after {
@@ -98,7 +120,7 @@
 .AllCards {
     display: flex;
     justify-content: space-between;
-    gap: 20px 0px;
+    gap: 25px 0px;
     flex-wrap: wrap;
 }
 
@@ -113,7 +135,7 @@
 
 .Card:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 10px #16c7e290;
+    box-shadow: 0px 0px 15px #16c7e290;
     transition: all 0.5s ease-in-out;
 }
 
@@ -175,4 +197,90 @@
     background-color: #0F1F41;
 }
 
+
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------- Mobile Size ------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 576px) {
+
+    .NavBarLogo {
+        width: 125px;
+        height: 100px;
+    }
+
+    .NavLinks ul {
+        display: none;
+        flex-direction: column;
+        gap: 30px;
+        position: absolute;
+        top: 6%;
+        left: 72%;
+        height: fit-content;
+        width: 25vh;
+        background-color: #131823;
+        text-align: left;
+        border: 1px solid #17A2B8;
+        border-radius: 10px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+
+    .NavLinks ul li a {
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 5px;
+    }
+
+    .NavLinks ul li span {
+        padding: 5px 5px;
+        margin-left: 5px;
+    }
+
+    .bars {
+        display: block;
+        font-size: 25px;
+        color: white;
+        margin-top: 35px;
+        margin-right: 25px;
+    }
+
+    .check:checked~ul {
+        display: flex;
+    }
+
+    /*---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+    /*----------------------------------------------------------------------- Categorize -----------------------------------------------------------------------------*/
+
+    .Container {
+        width: 95%;
+    }
+
+    .Categorize h2 {
+        font-size: 35px;
+        margin-bottom: 35px;
+    }
+
+    .Categorize h2::after {
+        left: 45%;
+    }
+
+    .AllCards {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .Card {
+        width: 90%;
+        height: 250px;
+    }
+
+    .last {
+        margin-bottom: 50px;
+    }
+
+    /*---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+}
